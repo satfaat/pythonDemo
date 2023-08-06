@@ -1,0 +1,3 @@
+accountNamesList = []
+accountBalancesList = []
+accountPasswordsList = []
