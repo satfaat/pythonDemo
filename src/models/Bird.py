@@ -5,3 +5,8 @@ class Bird:
 
     def info(self):
         print(f'{self.name} носит одежду размера «{self.size}».')
+
+
+# implementation
+bird_1 = Bird("bob", 10)
+bird_1.info()
