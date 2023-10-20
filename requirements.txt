@@ -1,2 +1,23 @@
 jupyterlab
 # tests
+pytest
+pytest-playwright
+#rpaframework
+#robotframework
+#robotframework-browser
+#selenium
+
+#robotframework-seleniumlibrary
+#pyresttest
+#playwright
+#pytube
+ruff
+# api
+httpx
+# dto
+pydantic
+jsonschema
+# report
+allure-pytest
+# secret
+python-dotenv
