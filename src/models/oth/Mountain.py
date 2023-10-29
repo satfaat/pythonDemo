@@ -1,4 +1,4 @@
-from models.Point import Point
+from models.math.Point import Point
 
 
 class Mountain(Point):

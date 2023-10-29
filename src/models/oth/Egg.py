@@ -1,4 +1,4 @@
-from models.Predator import Predator
+from models.oth.Predator import Predator
 
 
 class Egg(Predator):

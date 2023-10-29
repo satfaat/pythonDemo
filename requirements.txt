@@ -21,3 +21,7 @@ jsonschema
 allure-pytest
 # secret
 python-dotenv
+
+# sys
+psutil
+schedule

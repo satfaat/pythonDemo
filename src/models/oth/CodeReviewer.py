@@ -1,4 +1,4 @@
-from models.User import User
+from models.web.User import User
 
 
 class CodeReviewer(User):

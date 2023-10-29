@@ -1,4 +1,4 @@
-from models.Bird import Bird
+from models.oth.Bird import Bird
 
 
 class Predator(Bird):

@@ -1,4 +1,4 @@
-from prjMath.src.models.Number import Number
+from models.math.Number import Number
 
 
 def main() -> None:
