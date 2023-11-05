@@ -2,26 +2,36 @@ jupyterlab
 # tests
 pytest
 pytest-playwright
+#playwright
+pytest-order
+# parallel test
+pytest-xdist
+
 #rpaframework
 #robotframework
 #robotframework-browser
-#selenium
-
-#robotframework-seleniumlibrary
 #pyresttest
-#playwright
+
 #pytube
+
+# formater
 ruff
 # api
 httpx
-# dto
-pydantic
+#pydantic
 jsonschema
+# DB, dto and ORM
+#ormar
+#duckdb
+#'ibis-framework[duckdb]'
+tinydb
 # report
 allure-pytest
-# secret
+# console report
+pytest-sugar
+# secret store
 python-dotenv
-
+python-dotenv[cli]
 # sys
 psutil
 schedule

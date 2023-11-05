@@ -1,7 +1,5 @@
-
-pythonpath = "."
-
 [tool.pytest.ini_options]
+pythonpath = "."
 log_cli = true
 log_cli_level = "INFO"
 log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
@@ -12,4 +10,5 @@ markers = ['smoke: description',
    'regression: description',
     'integration: description']
 # for playwright
-addopts = "--browser firefox --tracing=retain-on-failure --screenshot=only-on-failure --output='.report/other' --alluredir=.report/allure-results"
+# for report: --alluredir=.report/allure-results
+addopts = "--browser chromium --tracing=retain-on-failure --screenshot=only-on-failure --output='.report/other' "
