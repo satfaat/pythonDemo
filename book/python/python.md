@@ -61,3 +61,19 @@ python.exe -m pip install --upgrade pip
 pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
 
 ```
+
+
+## sql for python
+
+- sqlalchemy
+```
+import sqlalchemy
+sqlalchemy.__version__
+```
+- mongo
+    - [mongodb-python](https://www.mongodb.com/python)
+```
+python -m pip install pymongo
+# or
+pip install pymongo .\mongodb --dbpath="D:\dev\.dbs\mongo"
+```

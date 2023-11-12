@@ -31,7 +31,16 @@ allure-pytest
 pytest-sugar
 # secret store
 python-dotenv
-python-dotenv[cli]
+'python-dotenv[cli]'
 # sys
 psutil
 schedule
+
+# web framework
+#fastapi[all]
+fastapi
+"uvicorn[standard]"
+Jinja2
+aiofiles
+markdown
+python-multipart
