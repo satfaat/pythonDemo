@@ -4,7 +4,7 @@ import json
 
 
 def open_md(filename):
-    filepath = os.path.join("../pages/", filename)
+    filepath = os.path.join("./pages/", filename)
     with open(filepath, "r", encoding="utf-8") as input_file:
         content_md = input_file.read()
 

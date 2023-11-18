@@ -3,6 +3,7 @@ from fastapi import APIRouter, HTTPException, status
 from fastapiDem.src.models.post import Post, PostCreate
 from fastapiDem.src.db import db
 
+
 router = APIRouter()
 
 

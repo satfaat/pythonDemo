@@ -35,12 +35,3 @@ python-dotenv
 # sys
 psutil
 schedule
-
-# web framework
-#fastapi[all]
-fastapi
-"uvicorn[standard]"
-Jinja2
-aiofiles
-markdown
-python-multipart
