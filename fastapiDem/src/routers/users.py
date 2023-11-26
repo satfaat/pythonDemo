@@ -3,7 +3,10 @@ from fastapi import APIRouter, HTTPException, status, Form
 from fastapiDem.src.models.user import User, UserCreate, tb_users
 
 
-router = APIRouter()
+router = APIRouter(
+    prefix='/users',
+    tags=["users"]
+)
 
 
 @router.get("/")

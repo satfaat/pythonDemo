@@ -4,7 +4,9 @@ from fastapiDem.configs.config import templates
 from fastapiDem.src.features.reader import open_json, open_md
 
 
-router = APIRouter()
+router = APIRouter(
+    tags=['page']
+)
 
 
 @router.get("/", response_class=HTMLResponse)

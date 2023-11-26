@@ -4,7 +4,10 @@ from fastapiDem.src.models.post import Post, PostCreate
 from fastapiDem.src.db import db
 
 
-router = APIRouter()
+router = APIRouter(
+    prefix='/posts',
+    tags=["posts"]
+)
 
 
 @router.get("/")

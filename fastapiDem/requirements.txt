@@ -2,7 +2,12 @@
 #fastapi[all]
 fastapi
 "uvicorn[standard]"
+# template
 Jinja2
+# for static 
 aiofiles
 markdown
+# form
 python-multipart
+# db
+SQLAlchemy
