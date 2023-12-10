@@ -9,5 +9,11 @@ aiofiles
 markdown
 # form
 python-multipart
-# db
-SQLAlchemy
+# dbs
+#SQLAlchemy
+sqlmodel
+#fastapi-sqlalchemy
+ormar[postgresql]
+ormar[sqlite]
+# token
+jwt
