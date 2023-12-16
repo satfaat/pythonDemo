@@ -15,5 +15,8 @@ sqlmodel
 #fastapi-sqlalchemy
 ormar[postgresql]
 ormar[sqlite]
+aiosqlite
 # token
 jwt
+# admin
+fastapi_amis_admin

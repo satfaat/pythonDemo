@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="/add" method="post">
+<form action="/api/todo/add" method="post">
     <textarea name="task" rows="5" placeholder="Enter your task"></textarea>
     <button type="submit">Add</button>
 </form>
@@ -13,7 +13,7 @@
 <div>
     {% for todo in todos %}
     <div class="task">
-        {% if todo.completed %}
+        {% if todo.is_complet %}
         <strike>{{ todo.task }}</strike>
         {% else %}
         {{ todo.task }}

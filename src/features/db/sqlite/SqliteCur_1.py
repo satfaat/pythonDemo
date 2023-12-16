@@ -2,7 +2,7 @@ import sqlite3
 from src.features.debug.debug import LOGGER
 
 
-class SqliteCtrl_1:
+class SqliteCur_1:
     def __init__(self, dbPath) -> None:
         self.dbPath = dbPath
 

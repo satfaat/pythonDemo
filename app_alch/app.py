@@ -1,25 +1,19 @@
-from fastapi import FastAPI, Request
-from fastapi.staticfiles import StaticFiles
-from sqlmodel import Session, select
-from routers.heroes import router as heroes
-from routers.team import router as team
-from configs.configDB import engine
-from app_alch.features.database import create_db_and_tables
-from contextlib import asynccontextmanager
 
 
-# @asynccontextmanager
-# async def lifespan(app: FastAPI):
-#     create_db_and_tables()
+from fastapi import FastAPI
+from app_alch.routers.item import router as itemRoute
+from app_alch.routers.user import router as userRoute
+import app_alch.models.item as item
+import app_alch.models.user as user
+from configs.dbConf.sqlAlch import engine
+
 
 app = FastAPI()
-app.mount('/static', StaticFiles(directory='../static'), name='static')
-
-
-app.include_router(heroes)
-app.include_router(team)
+app.include_router(itemRoute)
+app.include_router(userRoute)
 
 
 @app.on_event("startup")
-def on_startup():
-    create_db_and_tables()
+def on_startup() -> None:
+    item.Base.metadata.create_all(bind=engine)
+    user.Base.metadata.create_all(bind=engine)
