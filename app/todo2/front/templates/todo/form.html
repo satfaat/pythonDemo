@@ -1,0 +1,6 @@
+<li class="uk-flex uk-flex-between" hx-swap="outerHTML" hx-target="this">
+    <form id="todoForm" class="uk-form-horizontal uk-width-1-1" hx-put="/todo2/edit/{{ todo.id }}"
+        hx-trigger="submit,focusout">
+        <input autocomplete="off" autofocus class="uk-input" type="text" name="task" value="{{ todo.task }}">
+    </form>
+</li>

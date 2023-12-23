@@ -1,6 +1,6 @@
 
 from sqlmodel import Session, select
-from app.todo.models import Todo
+from app.todo.back.models import Todo
 
 
 def get_all(
