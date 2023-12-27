@@ -1,0 +1,27 @@
+# web framework
+#fastapi[all]
+fastapi
+"uvicorn[standard]"
+# template
+Jinja2
+# for static 
+aiofiles
+markdown
+# form
+python-multipart
+# dbs
+#SQLAlchemy
+sqlmodel
+#fastapi-sqlalchemy
+ormar[postgresql]
+ormar[sqlite]
+aiosqlite
+# token
+#jwt
+pyjwt
+pyjwt[crypto]
+fastapi-login
+# admin
+fastapi_amis_admin
+# config 
+pydantic-settings

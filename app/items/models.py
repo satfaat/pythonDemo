@@ -2,7 +2,7 @@
 
 from typing import Optional
 from sqlmodel import Field, Relationship, SQLModel
-from app.users.models import User
+from app.users.back.models import User
 
 
 class ItemBase(SQLModel):

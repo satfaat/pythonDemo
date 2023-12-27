@@ -1,9 +1,9 @@
 
-import app.heroes.crud as crud
+import app.heroes.back.crud as crud
 from fastapi import Depends, FastAPI, HTTPException, Query
 from sqlmodel import Session, select
 from typing import List
-from app.heroes.models import Hero, HeroCreate, HeroRead, HeroUpdate
+from app.heroes.back.models import Hero, HeroCreate, HeroRead, HeroUpdate
 from app.features.database import get_session
 from app.heroes.teams.teams import teams
 

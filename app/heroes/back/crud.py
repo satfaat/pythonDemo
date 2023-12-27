@@ -1,6 +1,6 @@
 
 from sqlmodel import Session, select
-from app.heroes.models import Hero, HeroCreate
+from app.heroes.back.models import Hero, HeroCreate
 
 
 def get_all(

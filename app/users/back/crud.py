@@ -1,7 +1,7 @@
 
 
 from sqlmodel import Session, select
-from app.users.models import User, UserCreate
+from app.users.back.models import User, UserCreate
 
 
 def get_user(session: Session, user_id: int):

@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    <form action="/users/submit/" method="POST">
+        <h3>Enter User name</h3>
+        <p><input type='text' name='nm' /></p>
+        <h3>Enter Password</h3>
+        <p><input type='password' name='pwd' /></p>
+        <p><input type='submit' value='Login' /></p>
+    </form>
+
+    <form action="http://localhost:8000/uploader" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>

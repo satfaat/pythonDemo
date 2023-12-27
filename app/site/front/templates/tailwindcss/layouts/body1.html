@@ -1,0 +1,26 @@
+
+
+<div class="bg-indigo-950 
+                text-green-100 
+                relative 
+                flex 
+                flex-col 
+                h-[100vh]
+                justify-center 
+                overflow-hidden 
+                py-6 
+                sm:py-12">
+    <main class="flex-grow">
+        <header class="flex justify-between">
+            <div class="logo">
+            </div>
+            {% include "components/menu/nav.html" %}
+        </header>
+
+        <section>{% block content %} {% endblock content %}</section>
+    </main>
+    {% include "footer/footer.html" %}
+
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', path='/js/scripts.js')}}"></script>
+</div>
