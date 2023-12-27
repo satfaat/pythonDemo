@@ -3,8 +3,8 @@ import markdown
 import json
 
 
-def open_md(filename):
-    filepath = os.path.join("./pages/", filename)
+def open_md(filename, path_to_pages):
+    filepath = os.path.join(path_to_pages, filename)
     with open(filepath, "r", encoding="utf-8") as input_file:
         content_md = input_file.read()
 
@@ -13,6 +13,7 @@ def open_md(filename):
         'content': md_to_html
     }
     return data
+
 
 def open_json(path_f, filename):
     filepath = os.path.join(path_f, filename)

@@ -1,0 +1,23 @@
+{
+    "Users": {
+        "1": {
+            "first_name": "Faat",
+            "last_name": "Sattarov",
+            "email": "faa@gmail.com"
+        },
+        "2": {
+            "first_name": null,
+            "last_name": null,
+            "username": "topol",
+            "email": null,
+            "pwd": "123"
+        },
+        "3": {
+            "first_name": null,
+            "last_name": null,
+            "username": "super",
+            "email": null,
+            "pwd": "132"
+        }
+    }
+}
