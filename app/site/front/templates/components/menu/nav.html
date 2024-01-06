@@ -1,19 +1,13 @@
-<nav class="bg-black bg-opacity-70 w-full h-16 rounded-3xl justify-center items-center flex">
+<nav class="bg-slate-600 bg-opacity-70 w-full h-16 justify-center items-center flex shadow-lg">
+    {% include "components/menu/logo.html" %}
     <ul class="text-yellow-100 text-3xl font-thin flex flex-row">
-        <li class="flex px-3 py-1 mx-auto hover:text-blue-400 hover:bg-gray-700 hover:bg-opacity-70 transition-all ease-in-out rounded-3xl">
-            <a href="/site/">Home</a>
+
+        {% for record in menu %}
+        <li
+            class="flex px-3 py-1 mx-auto hover:text-blue-400 hover:bg-gray-700 hover:bg-opacity-70 transition-all ease-in-out rounded-3xl">
+            <a href={{ record["lnk"] }}>{{ record["name"] }}</a>
         </li>
-        <li class="flex px-3 py-1 mx-auto hover:text-blue-400 hover:bg-gray-700 hover:bg-opacity-70 transition-all ease-in-out rounded-3xl">
-            <a href="/site/about">About</a>
-        </li>
-        <li class="flex px-3 py-1 mx-auto hover:text-blue-400 hover:bg-gray-700 hover:bg-opacity-70 transition-all ease-in-out rounded-3xl">
-            <a href="/site/contact">Contact</a>
-        </li>
-        <li class="flex px-3 py-1 mx-auto hover:text-blue-400 hover:bg-gray-700 hover:bg-opacity-70 transition-all ease-in-out rounded-3xl">
-            <a href="pricing.html">Pricing</a>
-        </li>
-        <li class="flex px-3 py-1 mx-auto hover:text-blue-400 hover:bg-gray-700 hover:bg-opacity-70 transition-all ease-in-out rounded-3xl">
-            <a href="faq.html">FAQ</a>
-        </li>
+        {% endfor %}
     </ul>
+    {% include "components/menu/search.html" %}
 </nav>

@@ -1,5 +1,7 @@
-{% extends "base.html" %} {% block heading %}
-<h1 class="p-2 text-center font-bold text-3xl text-teal-700">404</h1>
+{% extends "layouts/body2.html" %}
+{% block title %}Page Not Found{% endblock %}
+{% block heading %}
+<h1 class="p-2 text-center font-bold text-3xl text-teal-700">404: page not found</h1>
 {% endblock %}
 {% block content %}
 <div class="p-8 mx-auto max-w-xl text-2xl flex justify-center">{{message}}</div>

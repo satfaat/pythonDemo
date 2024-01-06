@@ -1,3 +1,4 @@
+import app.site.back.menu.crudTinybd as read_menu
 from typing import Annotated
 from fastapi import Depends, FastAPI, Request
 from fastapi.responses import HTMLResponse
@@ -16,12 +17,14 @@ site.mount('/static', StaticFiles(directory='site/front/static'), name='static')
 
 @site.get("/")
 def home(request: Request):
+    menu = read_menu.get_all_records()
     data = {
         'page': 'index',
         'md_content': open_md('home.md', "site/front/pages/")}
     context = {
         "request": request,
-        "data": data}
+        "data": data,
+        "menu": menu}
     return templates.TemplateResponse("site/index.html", context)
 
 
@@ -50,15 +53,19 @@ async def formDemo(request: Request):
 
 @site.get("/about")
 def about(request: Request):
-    context = {"request": request}
+    menu = read_menu.get_all_records()
+    context = {
+        "request": request,
+        "menu": menu}
     return templates.TemplateResponse("site/about.html", context)
 
 
 @site.get("/contact")
 def contact(request: Request):
+    menu = read_menu.get_all_records()
     context = {
         "request": request,
-        "title": "Contact"}
+        "menu": menu}
     return templates.TemplateResponse("site/contact.html", context)
 
 
@@ -81,3 +88,12 @@ def private(token: Annotated[str, Depends(oauth2_scheme)]):
     result = {"token": token}
 
     return result
+
+
+@site.get("/blog")
+def blog(request: Request):
+    menu = read_menu.get_all_records()
+    context = {
+        "request": request,
+        "menu": menu}
+    return templates.TemplateResponse("site/blog.html", context)

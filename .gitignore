@@ -1,4 +1,5 @@
 # secret data
+.dbs/sec
 
 # logs
 .report/

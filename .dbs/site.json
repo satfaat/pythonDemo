@@ -1,0 +1,28 @@
+{
+    "menu1": {
+        "1": {
+            "lnk": "/",
+            "name": "Home"
+        },
+        "2": {
+            "lnk": "about",
+            "name": "About"
+        },
+        "3": {
+            "lnk": "contact",
+            "name": "Contact"
+        },
+        "4": {
+            "lnk": "pricing.html",
+            "name": "Pricing"
+        },
+        "5": {
+            "lnk": "blog",
+            "name": "Blog"
+        },
+        "6": {
+            "lnk": "faq.html",
+            "name": "FAQ"
+        }
+    }
+}

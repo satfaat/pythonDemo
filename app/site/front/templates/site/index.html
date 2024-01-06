@@ -1,20 +1,28 @@
-{% extends "base.html" %}
+{% extends "layouts/body2.html" %}
 
 {% block title %}Home{% endblock %}
-
 {% block head %}{{super()}}{% endblock %}
 
 {% block content %}
-{% include 'components/sidebar.html' %}
-<main role="main" class="container">
-    <div class="row">
-        {{data.md_content.content|safe}}
-    </div>
-    <div class="row">
-        <p>Request = </p>
-        {{request|safe}}
-    </div>
-</main><!-- /.container -->
+<!-- {% include 'components/sidebar.html' %} -->
+
+<h2 class="text-2xl font-bold text-slate-200 uppercase">Index.html Home page</h2>
+<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+<div class="row">
+    {{data.md_content.content|safe}}
+</div>
+<div class="row">
+    <p>Request = </p>
+    {{request|safe}}
+</div>
+
+
+
+
+
+
 
 <script>
 

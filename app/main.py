@@ -15,10 +15,10 @@ from contextlib import asynccontextmanager
 
 app = FastAPI()
 app.mount('/static', StaticFiles(directory='../front/static'), name='static')
+app.mount('/', site)
 app.mount('/todo', todo)
 app.mount('/todo2', todo2)
 app.mount('/heroes', heroes)
-app.mount('/site', site)
 
 
 @app.on_event("startup")
