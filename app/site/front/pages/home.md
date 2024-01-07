@@ -1,6 +1,9 @@
 # Welcome FastAPI Web Starter
-This project uses [FastAPI](https://fastapi.tiangolo.com/), 
-[Jinja2](https://jinja.palletsprojects.com/en/2.11.x/), and 
+
+This project uses:
+
+- [FastAPI](https://fastapi.tiangolo.com/), 
+- [Jinja2](https://jinja.palletsprojects.com/en/2.11.x/)
 
 
 <div id="myarticle">

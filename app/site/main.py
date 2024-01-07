@@ -3,7 +3,6 @@ from typing import Annotated
 from fastapi import Depends, FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.security import OAuth2PasswordBearer
-from fastapi.staticfiles import StaticFiles
 from app.site.configFastapi import templates
 from src.features.web.reader import open_json, open_md
 
@@ -12,7 +11,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 site = FastAPI(
     tags=['page']
 )
-site.mount('/static', StaticFiles(directory='site/front/static'), name='static')
+# site.mount('/static', StaticFiles(directory='site/front/static'), name='static')
 
 
 @site.get("/")

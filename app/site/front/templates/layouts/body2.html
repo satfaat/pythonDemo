@@ -1,32 +1,37 @@
 {% extends "base/base.html" %}
 
+{% block head %}
+<style>
+    .notfound {
+        background-color: gray;
+        font-size: 125%;
+    }
+</style>
+{% endblock %}
+
 {% block body %}
 
+{% include "components/header/header1.html" %}
 
-<main id="content" role="main" class="bg-slate-950
+<main class="bg-slate-950
     text-green-100
     relative
     flex
     flex-col
-    h-[100vh]
     justify-center
     py-6
     sm:py-12">
-    <header class="flex flex-col justify-between">
-        <div class="logo">
-        </div>
-        {% include "components/menu/nav.html" %}
-    </header>
+
+
+    {% block content %}{% endblock content %}
 
     <section class="flex flex-col 
         min-h-screen max-w-screen-lg 
         justify-center items-center 
         overflow-hidden 
-        py-6 sm:py-12 m-auto">
-        {% block content %} {% endblock content %}
-    </section>
+        py-6 sm:py-12 m-auto"></section>
 </main>
-{% include "footer/footer.html" %}
+{% include "base/footer/footer.html" %}
 
 <!-- Core theme JS-->
 <script src="{{ url_for('static', path='/js/scripts.js')}}"></script>

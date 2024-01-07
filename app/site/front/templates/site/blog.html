@@ -5,28 +5,44 @@
 {% block heading %}Simple Blog - Blog Page{% endblock %}
 
 {% block content %}
-<h2>Total Number of Posts: {{ posts|length }}</h2>
 
-{% for post in posts %}
-<div class="post">
+<!-- {% include "site/sideLeft.html" %} -->
 
-    {% if post.status == 'published' %}
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.content|truncate }}</p>
-    <p>Published on: {{ post.publication_date }}</p>
+<div class="column middle">
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit
+        nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo
+        tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit
+        nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo
+        tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <div id="id01"></div>
 
-    <h4>Comments:</h4>
-    <ul>
-        {% for comment in post.comments %}
-        <li class="comment">{{ comment.author }}-: {{ comment.content }}</li>
+    <h2>Total Number of Posts: {{ posts|length }}</h2>
+
+    {% for post in posts %}
+    <div class="post">
+
+        {% if post.status == 'published' %}
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content|truncate }}</p>
+        <p>Published on: {{ post.publication_date }}</p>
+
+        <h4>Comments:</h4>
+        <ul>
+            {% for comment in post.comments %}
+            <li class="comment">{{ comment.author }}-: {{ comment.content }}</li>
 
 
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>This post is still in draft mode.</p>
-    {% endif %}
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>This post is still in draft mode.</p>
+        {% endif %}
+    </div>
+    <hr>
+    {% endfor %}
 </div>
-<hr>
-{% endfor %}
+<!-- {% include "site/sideRight.html" %} -->
+
 {% endblock %}
