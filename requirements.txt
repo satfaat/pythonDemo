@@ -16,6 +16,7 @@ pytest-xdist
 
 # formater
 ruff
+black
 # api
 httpx
 #pydantic
