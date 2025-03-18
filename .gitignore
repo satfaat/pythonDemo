@@ -1,3 +1,6 @@
+# trash
+.idea/
+
 # secret data
 .dbs/sec
 .data/sec
